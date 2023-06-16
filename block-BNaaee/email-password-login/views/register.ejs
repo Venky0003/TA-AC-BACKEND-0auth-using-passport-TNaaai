@@ -1,0 +1,19 @@
+<%- include('partials/header')-%>
+<section class="container text-center">
+  <h2 class="form-header">Registration</h2>
+    <form class="form-login" action="/register" method="POST">
+      <div>
+        <label for="username">Email:</label>
+        <input class="form-control" type="username" id="username" name="username" placeholder="example@gmail.com" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input  class="form-control" type="password" id="password" name="password" required>
+      </div>
+      <div>
+        <button class="btn btn-reg" type="submit">Register</button>
+      </div>
+    </form>
+</section>
+    
+    <%- include('partials/footer')-%>
