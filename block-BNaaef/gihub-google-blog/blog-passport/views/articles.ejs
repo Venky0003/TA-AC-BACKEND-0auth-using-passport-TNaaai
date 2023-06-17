@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container flex justify-between align-center">
+        <h1>Articles List</h1>
+        <nav>
+          <a class="links" href="/articles/new">Add Article</a>
+          <a class="links" href="/logout">Logout</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <% articles.forEach(article => { %>
+      <h2 class="article-titles">
+        <a href="/articles/<%= article._id %>">
+          <%= article.title %>
+        </a>
+      </h2>
+      <% }) %>
+    </div>
+  </body>
+</html>
