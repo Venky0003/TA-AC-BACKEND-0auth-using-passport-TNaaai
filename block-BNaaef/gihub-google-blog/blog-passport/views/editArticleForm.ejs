@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container flex justify-between align-center">
+        <h1>Articles</h1>
+        <nav>
+          <a class="links" href="/articles">Back to Articles</a>
+        </nav>
+      </div>
+    </header>
+    <section class="container flex">
+      <div class="flex-box">
+        <form action="/articles/<%= article.id %>" method="POST">
+          <h2 class="form-header">Article Details</h2>
+          <input
+            type="text"
+            name="title"
+            class="form-control"
+            placeholder="Enter Title"
+            value="<%= article.title %>"
+          />
+          <textarea
+            name="description"
+            id=""
+            cols="87"
+            rows="15"
+            placeholder="Add Description"
+          >
+          <%= article.description %></textarea
+          >
+          <input
+            type="number"
+            name="likes"
+            class="form-control"
+            placeholder="likes"
+            value="<%= article.likes !== undefined && article.likes !== '' ? article.likes : 0 %>"
+          />
+          <input
+            type="submit"
+            class="btn btn-add-update"
+            value="Update Article"
+          />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
